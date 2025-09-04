@@ -51,11 +51,11 @@ Describe your project here. What does the chatbot do? Why is it useful or intere
 - [X] Live server runs and page loads without errors  
 
 ### Step 2: UI & DOM Wiring  
-- [ ] Input field, send button, and output area added to HTML  
-- [ ] Bootstrap styling applied to input and button  
-- [ ] Output area converted to Bootstrap card structure  
-- [ ] Button click event wired and input value captured  
-- [ ] Empty input shows warning, valid input shows "Thinking…"  
+- [X] Input field, send button, and output area added to HTML  
+- [X] Bootstrap styling applied to input and button  
+- [X] Output area converted to Bootstrap card structure  
+- [X] Button click event wired and input value captured  
+- [X] Empty input shows warning, valid input shows "Thinking…"  
 
 ### Step 3: Model Call (HF Inference)  
 - [ ] `sendToModel()` function created with Hugging Face fetch snippet  
