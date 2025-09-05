@@ -1,3 +1,5 @@
+//Put the prompts in session storage so that you can call them in functions later.
+
 //* Variables
 
 let userPrompt = "";
