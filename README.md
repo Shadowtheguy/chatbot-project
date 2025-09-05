@@ -58,9 +58,9 @@ Describe your project here. What does the chatbot do? Why is it useful or intere
 - [X] Empty input shows warning, valid input shows "Thinking…"  
 
 ### Step 3: Model Call (HF Inference)  
-- [ ] `sendToModel()` function created with Hugging Face fetch snippet  
-- [ ] API token replaced and test prompt added  
-- [ ] `botReply` variable set and function called from button handler  
+- [X] `sendToModel()` function created with Hugging Face fetch snippet  
+- [X] API token replaced and test prompt added  
+- [X] `botReply` variable set and function called from button handler  
 
 ### Step 4: Use userPrompt from Input  
 - [ ] User input captured and stored in `userPrompt` variable  
