@@ -1,5 +1,6 @@
 //* Variables
 
+let userPrompt = "";
 let botTriviaQuestion = "";
 let botTriviaAnswer = "";
 
@@ -26,7 +27,8 @@ function sendToModel() {
     messages: [
       {
         role: "user",
-        content: "Give me one Trivia question, without the answer",
+        content:
+          "Give me one Trivia question, without the answer, about" + userPrompt,
       },
     ],
     model: "openai/gpt-oss-120b:fireworks-ai",
@@ -45,9 +47,12 @@ onEvent("buttonQuestion", "click", function () {
 
   //setText("triviaQuestion", "Working Faster...");
   questionText = document.getElementById("triviaQuestion");
-  questionText.textContent = "Working Faster..."
-  
-  sendToModel();
+  questionText.textContent = "Working Faster...";
+
+  userPrompt = getValue("triviaTopic");
+  console.log(userPrompt);
+
+  //sendToModel();
 });
 
 onEvent("buttonAnswer", "click", function () {
@@ -55,7 +60,7 @@ onEvent("buttonAnswer", "click", function () {
 
   //setText("triviaAnswer", "Get Ready...");
   answerText = document.getElementById("triviaAnswer");
-  answerText.textContent = "Get Ready..."
+  answerText.textContent = "Get Ready...";
 
   sendToModel();
 });
