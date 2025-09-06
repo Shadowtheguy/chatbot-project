@@ -63,16 +63,16 @@ Describe your project here. What does the chatbot do? Why is it useful or intere
 - [X] `botReply` variable set and function called from button handler  
 
 ### Step 4: Use userPrompt from Input  
-- [ ] User input captured and stored in `userPrompt` variable  
-- [ ] `sendToModel()` updated to use dynamic user input  
-- [ ] Reply rendered in output area when fetch resolves  
-- [ ] Different prompts produce sensible replies  
+- [X] User input captured and stored in `userPrompt` variable  
+- [X] `sendToModel()` updated to use dynamic user input  
+- [X] Reply rendered in output area when fetch resolves  
+- [X] Different prompts produce sensible replies  
 
 ### Step 5: Validation Polish  
-- [ ] If statement added to check if input is empty  
-- [ ] If statement shows validation message when input is empty  
-- [ ] If statement prevents model call when input is empty  
-- [ ] If statement clears validation when input has text  
+- [X] If statement added to check if input is empty  
+- [X] If statement shows validation message when input is empty  
+- [X] If statement prevents model call when input is empty  
+- [X] If statement clears validation when input has text  
 
 ### Step 6: Challenge Extensions (Optional)  
 - [ ] At least one challenge feature implemented (role-based prompts, UI controls, etc.)  
