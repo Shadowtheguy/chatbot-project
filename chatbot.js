@@ -3,7 +3,7 @@
 //* Variables
 
 let userPrompt = "";
-let botTriviaQuestion = localStorage.getItem("currentQuestion");
+let botTriviaQuestion = sessionStorage.getItem("currentQuestion");
 let canAnswer = false;
 
 //* Functions
@@ -63,7 +63,7 @@ function sendQuestionToModel() {
       {
         role: "user",
         content:
-          botTriviaQuestion + "Please keep the answer as short as possible.",
+          botTriviaQuestion,
       },
     ],
     model: "openai/gpt-oss-120b:fireworks-ai",
@@ -71,6 +71,7 @@ function sendQuestionToModel() {
     botReply = response.choices[0].message.content;
     console.log("Bot reply:", botReply);
     answerText.textContent = botReply;
+    console.log(botTriviaQuestion);
   });
 }
 
@@ -83,7 +84,7 @@ onEvent("buttonQuestion", "click", function () {
   console.log(userPrompt);
 
   if (userPrompt === "") {
-    userPrompt === "a random topic";
+    userPrompt = "a random topic";
     //setText("triviaQuestion", "Randomizing Trivia...");
     questionText = document.getElementById("triviaQuestion");
     questionText.textContent = "Randomizing Trivia...";
@@ -92,7 +93,7 @@ onEvent("buttonQuestion", "click", function () {
     questionText = document.getElementById("triviaQuestion");
     questionText.textContent = "Great Topic! Generating...";
   }
-  //sendToModel();
+  sendToModel();
   canAnswer = true;
 });
 
@@ -106,7 +107,8 @@ onEvent("buttonAnswer", "click", function () {
     //setText("triviaAnswer", "Get Ready...");
     answerText = document.getElementById("triviaAnswer");
     answerText.textContent = "Get Ready...";
+    botTriviaQuestion = sessionStorage.getItem("currentQuestion");
 
-    //sendQuestionToModel();
+    sendQuestionToModel();
   }
 });
